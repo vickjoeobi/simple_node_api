@@ -1,6 +1,8 @@
+// Connecting the app 
 const express = require("express")
 const app = express()
 
+// Connecting the routes. I decided to just make it simple and put the routes and return in one file.
 app.get("/", (req, res) => {
   res.json({
     slackUsername: "vickjoe",
@@ -10,6 +12,7 @@ app.get("/", (req, res) => {
   })
 })
 
+// Listening to the port
 app.listen(process.env.PORT || 3000, () => {
   console.log("Server is Up and Running")
 })
