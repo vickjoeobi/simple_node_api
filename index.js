@@ -1,9 +1,12 @@
 // Connecting the app 
 const express = require("express")
+const cors = require("cors")
+
 const app = express()
+app.use(cors())
 
 // Connecting the routes. I decided to just make it simple and put the routes and return in one file.
-app.get("/", (req, res) => {
+app.get("/", cors(), (req, res) => {
   res.json({
     slackUsername: "vickjoe",
     backend: true,
